@@ -1,0 +1,1 @@
+{"mappings":"AAAA,MAAM,MAAM,IAAI;AAEhB,IAAI","sources":["src/scripts/index.js"],"sourcesContent":["const app = new Controller();\r\n\r\napp.initShop();\r\n"],"names":[],"version":3,"file":"index.6a31943b.js.map","sourceRoot":"/__parcel_source_root/"}

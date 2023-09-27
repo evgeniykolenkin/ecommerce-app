@@ -1,0 +1,20 @@
+{
+  "name": "ecommerce",
+  "source": [
+    "src/index.html",
+    "src/cart.html",
+    "src/checkout.html",
+    "src/order.html"
+  ],
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build --no-source-maps --dist-dir prod"
+  },
+  "devDependencies": {
+    "parcel": "latest",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "firebase": "^10.4.0"
+  }
+}
