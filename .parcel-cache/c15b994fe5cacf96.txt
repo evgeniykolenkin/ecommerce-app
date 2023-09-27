@@ -1,4 +1,4 @@
-17544
+17550
 119C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\@firebase\auth\dist\browser-cjs\src\core\auth\initialize.d.ts133395871536629264 0
 96C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\type-fest\source\iterable-element.d.ts133384857732637441 0
 106C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\firebase\compat\firestore\dist\esm\installations133403146756949164 1
@@ -77,7 +77,7 @@
 99C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\@firebase\auth\dist\cordova\src\core\auth133403146533146449 1
 131C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\@firebase\firestore\dist\packages\firestore\src\lite-api\field_value.d.ts133395871526734668 0
 75C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\has-flag\index.js133384857729209389 0
-49C:\Users\Admin\Desktop\sd-code\ecommerce-app\dist133403260326724529 1
+49C:\Users\Admin\Desktop\sd-code\ecommerce-app\dist133403267690701089 1
 136C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\@firebase\firestore\dist\packages\firestore\src\model\transform_operation.d.ts133395871548072024 0
 130C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\@firebase\firestore\dist\firestore\test\unit\model\field_index.test.d.ts133395871525969747 0
 127C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\@firebase\database\dist\node-esm\src\core\operation\AckUserWrite.d.ts133395871506564505 0
@@ -109,7 +109,7 @@
 73C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\xxhash-wasm\umd133403146824973620 1
 98C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\dom-serializer\node_modules\entities\lib133403146718756032 1
 103C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\abortcontroller-polyfill\dist\umd-polyfill.js133384857731832697 0
-49C:\Users\Admin\Desktop\sd-code\ecommerce-app\docs133403246574816390 1
+49C:\Users\Admin\Desktop\sd-code\ecommerce-app\docs133403262186086198 1
 89C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\caniuse-lite\data\regions\ER.js133384857739576900 0
 68C:\Users\Admin\Desktop\sd-code\ecommerce-app\prod\index.98861bb4.css133403244715823669 0
 57C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules133403146826311053 1
@@ -122,7 +122,7 @@
 128C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\@firebase\firestore\dist\firestore\test\unit\util\sorted_map.test.d.ts133395871544521177 0
 104C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\firebase\storage\dist\esm\functions\index.d.ts133395871559584600 0
 120C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\@grpc\grpc-js\build\src\generated\grpc\channelz\v1\Socket.d.ts133395871514020723 0
-49C:\Users\Admin\Desktop\sd-code\ecommerce-app\prod133403244719353057 1
+49C:\Users\Admin\Desktop\sd-code\ecommerce-app\prod133403261113283952 1
 76C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\uuid\dist\regex.js133397650338035717 0
 96C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\caniuse-lite\data\features\promises.js133384857741574891 0
 118C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\@firebase\firestore\dist\firestore\src\platform\browser_lite133403146584126832 1
@@ -170,19 +170,20 @@
 105C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\firebase\auth\cordova\dist\compat\index.rn.d.ts133395871561836854 0
 116C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\css-select\node_modules\domutils\lib\manipulation.d.ts.map133384857734150627 0
 65C:\Users\Admin\Desktop\sd-code\ecommerce-app\src\styles\reset.css133397744798341034 0
-101C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\protobufjs\dist\minimal\protobuf.min.js.map133395871504772875 0
-93C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\firebase\compat\auth\dist\index.mjs133395871520300292 0
-58C:\Users\Admin\Desktop\sd-code\ecommerce-app\src\cart.html133401276675140929 0
-65C:\Users\Admin\Desktop\sd-code\ecommerce-app\src\scripts\order.js133401896590132360 0
-129C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\@firebase\auth\dist\node-esm\src\platform_browser\strategies\phone.d.ts133395871544671159 0
 95C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\utility-types\dist\utility-types.d.ts133384857732772384 0
 70C:\Users\Admin\Desktop\sd-code\ecommerce-app\src\scripts\controller.js133403260325408190 0
 125C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\@firebase\auth\dist\browser-cjs\src\core\providers\github.test.d.ts133395871529651603 0
 89C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\caniuse-lite\data\regions\AG.js133384857731739398 0
 125C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\@firebase\auth\dist\browser-cjs\src\platform_cordova\popup_redirect133403146530585763 1
 115C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\firebase\firestore\lite\dist\esm\remote-config\index.d.ts133395871549796604 0
+70C:\Users\Admin\Desktop\sd-code\ecommerce-app\prod\checkout.9d143d15.js133403261113273943 0
 93C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\protobufjs\ext\descriptor\README.md133395871505133359 0
 80C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\string-width\readme.md133395871498643426 0
+101C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\protobufjs\dist\minimal\protobuf.min.js.map133395871504772875 0
+93C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\firebase\compat\auth\dist\index.mjs133395871520300292 0
+58C:\Users\Admin\Desktop\sd-code\ecommerce-app\src\cart.html133401276675140929 0
+65C:\Users\Admin\Desktop\sd-code\ecommerce-app\src\scripts\order.js133401896590132360 0
+129C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\@firebase\auth\dist\node-esm\src\platform_browser\strategies\phone.d.ts133395871544671159 0
 108C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\@firebase\auth\dist\node-esm\src\mfa\mfa_info.d.ts133395871539094840 0
 93C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\firebase\remote-config\dist\storage133403146801149467 1
 68C:\Users\Admin\Desktop\sd-code\ecommerce-app\prod\index.33d91e59.css133403147441997294 0
@@ -304,10 +305,10 @@
 96C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\@parcel\core\lib\public\Environment.js133384857735875234 0
 103C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\firebase\remote-config\dist\esm\remote-config133403146800508473 1
 74C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\uuid\dist\md5.js133397650337929528 0
-60C:\Users\Admin\Desktop\sd-code\ecommerce-app\prod\order.html133403244719343993 0
+60C:\Users\Admin\Desktop\sd-code\ecommerce-app\prod\order.html133403261113273943 0
 130C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\@firebase\auth\dist\cordova\test\integration\webdriver\util\ui_page.d.ts133395871557841619 0
 90C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\uuid\dist\commonjs-browser\v5.js133397650338241634 0
-59C:\Users\Admin\Desktop\sd-code\ecommerce-app\prod\cart.html133403244719343993 0
+59C:\Users\Admin\Desktop\sd-code\ecommerce-app\prod\cart.html133403261113263943 0
 69C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\idb\LICENSE133395871497920329 0
 99C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\@firebase\util\dist\index.node.cjs.js.map133395871501229994 0
 79C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\y18n\build\lib\cjs.js133395871498548424 0
@@ -319,7 +320,7 @@
 109C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\firebase\compat\messaging\dist\app-check\index.d.ts133395871541878159 0
 103C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\css-select\lib\pseudo-selectors\subselects.js133384857733014204 0
 124C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\@parcel\optimizer-htmlnano\node_modules\svgo\plugins\mergePaths.js133384857733874495 0
-64C:\Users\Admin\Desktop\sd-code\ecommerce-app\src\scripts\view.js133403260578983148 0
+64C:\Users\Admin\Desktop\sd-code\ecommerce-app\src\scripts\view.js133403267578903477 0
 127C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\@firebase\installations\dist\src\helpers\refresh-auth-token.test.d.ts133395871505234478 0
 89C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\lmdb\node_modules\msgpackr\dist133403146810416369 1
 116C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\firebase\firestore\lite\dist\esm\compat\storage\index.d.ts133395871549646592 0
@@ -370,7 +371,7 @@
 70C:\Users\Admin\Desktop\sd-code\ecommerce-app\prod\checkout.b54bae6f.js133403133612130271 0
 116C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\firebase\compat\functions\dist\esm\messaging\sw\index.d.ts133395871540076696 0
 123C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\@firebase\messaging\dist\src\helpers\externalizePayload.test.d.ts133395871503056838 0
-63C:\Users\Admin\Desktop\sd-code\ecommerce-app\prod\checkout.html133403244719343993 0
+63C:\Users\Admin\Desktop\sd-code\ecommerce-app\prod\checkout.html133403261113273943 0
 135C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\@firebase\auth\dist\src\platform_browser\recaptcha\recaptcha_loader.test.d.ts133395871549626600 0
 120C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\firebase\compat\analytics\dist\esm\compat\functions\index.d.ts133395871530901476 0
 78C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\semver\bin\semver.js133384857734410071 0
@@ -435,7 +436,7 @@
 68C:\Users\Admin\Desktop\sd-code\ecommerce-app\prod\index.eb304d3d.css133403147441997294 0
 103C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\caniuse-lite\data\features\iframe-seamless.js133384857740239895 0
 107C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\lmdb\dependencies\lmdb\libraries\liblmdb\Makefile133384857732379726 0
-60C:\Users\Admin\Desktop\sd-code\ecommerce-app\prod\index.html133403244719343993 0
+60C:\Users\Admin\Desktop\sd-code\ecommerce-app\prod\index.html133403261113263943 0
 86C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\whatwg-url\lib\public-api.js133395871499093651 0
 107C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\@parcel\optimizer-svgo\node_modules\css-tree\data133403146657316190 1
 93C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\firebase\firebase-firestore-lite.js133395871503000372 0
@@ -686,6 +687,7 @@
 66C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\css-what133403146711138720 1
 91C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\lmdb\dependencies\lz4\lib\LICENSE133384857731903684 0
 81C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\@firebase\installations133403146615443618 1
+68C:\Users\Admin\Desktop\sd-code\ecommerce-app\docs\index.cb754a33.css133403262186086198 0
 110C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\firebase\compat\functions\dist\compat\index.cdn.d.ts133395871522051991 0
 98C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\type-fest\source\fixed-length-array.d.ts133384857732339943 0
 104C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\firebase\app-check\dist\performance\index.d.ts133395871526550263 0
@@ -1271,6 +1273,13 @@
 141C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\@firebase\firestore\dist\lite\packages\firestore\src\model\document_comparator.d.ts133395871524024860 0
 96C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\firebase\compat\analytics\dist\storage133403146739916945 1
 65C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\timsort133403146821029601 1
+98C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\firebase\firestore\dist\esm\auth\cordova133403146779469523 1
+118C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\@parcel\optimizer-htmlnano\node_modules\css-select\README.md133384857733400185 0
+99C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\caniuse-lite\data\features\geolocation.js133384857739973822 0
+116C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\css-select\node_modules\domutils\lib\esm\manipulation.d.ts133384857735396735 0
+80C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\yargs-parser\README.md133395871500044548 0
+91C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\css-tree\cjs\generator\create.cjs133384857733058981 0
+94C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\firebase\messaging\dist\auth\cordova133403146789886886 1
 105C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\firebase\messaging\sw\dist\functions\index.d.ts133395871555485509 0
 72C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\to-regex-range133403146821145059 1
 124C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\@firebase\firestore-compat\dist\node-esm\test\validation.test.d.ts133395871504772875 0
@@ -1284,13 +1293,6 @@
 128C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\@firebase\firestore\dist\packages\firestore\test\util\api_helpers.d.ts133395871512645112 0
 87C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\caniuse-lite\data\browsers.js133384857736056137 0
 77C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\picomatch\README.md133384857731672130 0
-98C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\firebase\firestore\dist\esm\auth\cordova133403146779469523 1
-118C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\@parcel\optimizer-htmlnano\node_modules\css-select\README.md133384857733400185 0
-99C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\caniuse-lite\data\features\geolocation.js133384857739973822 0
-116C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\css-select\node_modules\domutils\lib\esm\manipulation.d.ts133384857735396735 0
-80C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\yargs-parser\README.md133395871500044548 0
-91C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\css-tree\cjs\generator\create.cjs133384857733058981 0
-94C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\firebase\messaging\dist\auth\cordova133403146789886886 1
 107C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\firebase\compat\auth\dist\auth\cordova\index.d.ts133395871534056759 0
 87C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\yargs\build\lib\middleware.js133395871500812375 0
 101C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\@firebase\auth\dist\index.webworker.esm5.js133395871502980371 0
@@ -2393,10 +2395,10 @@
 115C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\dom-serializer\node_modules\entities\lib\maps\legacy.json133384857731249246 0
 115C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\@firebase\firestore\dist\lite\packages\firestore\src\core133403146596355969 1
 101C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\firebase\messaging\dist\database\index.d.ts133395871552738381 0
-95C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\firebase\performance\dist\esm\storage133403146797753206 1
 107C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\firebase\compat\storage\dist\app-check\index.d.ts133395871545513769 0
 140C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\@firebase\firestore\dist\lite\packages\firestore\src\remote\persistent_stream.d.ts133395871538360952 0
 89C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\lmdb\util\set-optional-deps.cjs133384857736071035 0
+95C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\firebase\performance\dist\esm\storage133403146797753206 1
 79C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\utility-types\LICENSE133384857728483614 0
 130C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\@firebase\auth\dist\esm5\src\platform_browser\strategies\phone.test.d.ts133395871545223105 0
 118C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\@swc\helpers\src\_class_static_private_field_destructure.mjs133384857740451255 0
@@ -5075,6 +5077,7 @@
 99C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\firebase\firebase-app-check-compat.js.map133395871510352337 0
 131C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\@firebase\auth\dist\test\integration\flows\middleware_test_generator.d.ts133395871541074466 0
 114C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\firebase\compat\app\dist\esm\compat\messaging\index.d.ts133395871533466299 0
+70C:\Users\Admin\Desktop\sd-code\ecommerce-app\docs\checkout.ab598aa3.js133403262186056199 0
 95C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\firebase\firestore\dist\index.mjs.map133395871519720741 0
 88C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\firebase\firebase-app-check.js133395871499233651 0
 95C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\firebase\functions\dist\esm\functions133403146786176219 1
@@ -9686,7 +9689,6 @@
 110C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\css-select\node_modules\entities\lib\esm\escape.d.ts133384857735695142 0
 109C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\firebase\analytics\dist\compat\firestore\index.d.ts133395871524510989 0
 99C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\css-tree\lib\syntax\node\AtrulePrelude.js133384857737266088 0
-93C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\@firebase\auth\dist\cordova\src\api133403146532756445 1
 108C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\firebase\analytics\dist\compat\database\index.d.ts133395871524464119 0
 81C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\css-select\lib\index.js133384857732369487 0
 109C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\firebase\analytics\dist\compat\app-check\index.d.ts133395871524376748 0
@@ -11749,7 +11751,6 @@
 115C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\@firebase\installations\dist\src\helpers\fid-changed.d.ts133395871503530966 0
 99C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\@swc\helpers\src\_to_consumable_array.mjs133384857740764409 0
 91C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\@swc\helpers\src\_ts_decorate.mjs133384857740782816 0
-88C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\@swc\helpers\lib\_construct.js133384857737563107 0
 91C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\@swc\helpers\src\_ts_metadata.mjs133384857740792815 0
 143C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\@firebase\auth\dist\esm5\src\platform_cordova\popup_redirect\popup_redirect.test.d.ts133395871546258162 0
 87C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\@swc\helpers\src\_type_of.mjs133384857740802817 0
@@ -11778,6 +11779,7 @@
 114C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\@swc\helpers\lib\_class_static_private_field_spec_get.js133384857737451973 0
 75C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\@grpc\grpc-js\src133403146639746911 1
 112C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\@swc\helpers\lib\_class_static_private_field_update.js133384857737518391 0
+88C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\@swc\helpers\lib\_construct.js133384857737563107 0
 91C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\@swc\helpers\lib\_create_class.js133384857737578220 0
 91C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\@swc\helpers\lib\_create_super.js133384857737619515 0
 87C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\@swc\helpers\lib\_decorate.js133384857737651875 0
@@ -13617,7 +13619,7 @@
 117C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\@firebase\auth\dist\src\core\user\user_credential_impl.d.ts133395871558084265 0
 115C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\@grpc\grpc-js\src\generated\google\protobuf\Int64Value.ts133395871512256066 0
 92C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\@grpc\grpc-js\proto\channelz.proto133395871509757936 0
-74C:\Users\Admin\Desktop\sd-code\ecommerce-app\dist\checkout.4bb6ca96.js.map133403260326714527 0
+74C:\Users\Admin\Desktop\sd-code\ecommerce-app\dist\checkout.4bb6ca96.js.map133403267690691094 0
 81C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\@grpc\grpc-js\build\src133403146636318291 1
 102C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\@grpc\grpc-js\build\src\backoff-timeout.d.ts133395871510004653 0
 130C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\@firebase\firestore\dist\packages\firestore\src\remote\remote_store.d.ts133395871541691194 0
@@ -16330,6 +16332,7 @@
 105C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\@firebase\auth\dist\esm5\src\core\util\log.d.ts133395871538577060 0
 112C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\@firebase\auth\dist\node-esm\src\core\util\assert.d.ts133395871512836534 0
 118C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\@firebase\auth\dist\node-esm\src\core\util\browser.test.d.ts133395871518641970 0
+67C:\Users\Admin\Desktop\sd-code\ecommerce-app\docs\cart.cb674561.css133403262186026182 0
 119C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\@firebase\auth\dist\node-esm\src\core\util\emulator.test.d.ts133395871524611676 0
 118C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\@firebase\auth\dist\node-esm\src\core\util\instantiator.d.ts133395871536987406 0
 123C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\@firebase\auth\dist\node-esm\src\core\util\instantiator.test.d.ts133395871537103209 0
@@ -16859,6 +16862,7 @@
 116C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\@firebase\auth\dist\cordova\test\helpers\timeout_stub.d.ts133395871555981850 0
 137C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\@firebase\auth\dist\cordova\test\helpers\integration\emulator_rest_helpers.d.ts133395871524043375 0
 124C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\@firebase\auth\dist\cordova\test\helpers\integration\settings.d.ts133395871553981175 0
+93C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\@firebase\auth\dist\cordova\src\api133403146532756445 1
 94C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\@firebase\auth\dist\cordova\src\core133403146534386554 1
 70C:\Users\Admin\Desktop\sd-code\ecommerce-app\docs\checkout.3bac9f33.js133403246574756384 0
 95C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\@firebase\auth\dist\cordova\src\model133403146535156576 1
@@ -17499,13 +17503,15 @@
 89C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\.bin\update-browserslist-db.ps1133384857742788733 0
 71C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\.bin\uuid.cmd133397650338421537 0
 71C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\.bin\uuid.ps1133397650338421537 0
-59C:\Users\Admin\Desktop\sd-code\ecommerce-app\docs\cart.html133403246574726388 0
-63C:\Users\Admin\Desktop\sd-code\ecommerce-app\docs\checkout.html133403246574786396 0
+59C:\Users\Admin\Desktop\sd-code\ecommerce-app\docs\cart.html133403262186026182 0
+63C:\Users\Admin\Desktop\sd-code\ecommerce-app\docs\checkout.html133403262186056199 0
+68C:\Users\Admin\Desktop\sd-code\ecommerce-app\docs\index.106e2ffa.css133403262186066201 0
 68C:\Users\Admin\Desktop\sd-code\ecommerce-app\docs\index.33d91e59.css133403246574796383 0
 68C:\Users\Admin\Desktop\sd-code\ecommerce-app\docs\index.4c111c15.css133403246574796383 0
 68C:\Users\Admin\Desktop\sd-code\ecommerce-app\docs\index.56f55d49.css133403246574806384 0
-60C:\Users\Admin\Desktop\sd-code\ecommerce-app\docs\index.html133403246574816390 0
-60C:\Users\Admin\Desktop\sd-code\ecommerce-app\docs\order.html133403246574816390 0
+68C:\Users\Admin\Desktop\sd-code\ecommerce-app\docs\index.98861bb4.css133403262186076206 0
+60C:\Users\Admin\Desktop\sd-code\ecommerce-app\docs\index.html133403262186086198 0
+60C:\Users\Admin\Desktop\sd-code\ecommerce-app\docs\order.html133403262186086198 0
 66C:\Users\Admin\Desktop\sd-code\ecommerce-app\dist\cart.484a35f5.js133403257126182465 0
 67C:\Users\Admin\Desktop\sd-code\ecommerce-app\dist\cart.4ea326c1.css133403257126228028 0
 67C:\Users\Admin\Desktop\sd-code\ecommerce-app\dist\cart.54a1ca37.css133403079708165800 0
@@ -17514,7 +17520,7 @@
 59C:\Users\Admin\Desktop\sd-code\ecommerce-app\dist\cart.html133403257127180513 0
 70C:\Users\Admin\Desktop\sd-code\ecommerce-app\dist\checkout.06e774f3.js133403257127180513 0
 74C:\Users\Admin\Desktop\sd-code\ecommerce-app\dist\checkout.2a88bb0d.js.map133397664106344488 0
-70C:\Users\Admin\Desktop\sd-code\ecommerce-app\dist\checkout.4bb6ca96.js133403260326565071 0
+70C:\Users\Admin\Desktop\sd-code\ecommerce-app\dist\checkout.4bb6ca96.js133403267690581108 0
 75C:\Users\Admin\Desktop\sd-code\ecommerce-app\dist\checkout.54a1ca37.css.map133401275899180425 0
 74C:\Users\Admin\Desktop\sd-code\ecommerce-app\dist\checkout.8b0304c5.js.map133396066170615375 0
 74C:\Users\Admin\Desktop\sd-code\ecommerce-app\dist\checkout.aef8652c.js.map133397655518593333 0

@@ -347,7 +347,7 @@ export class View {
         return order.map((orderItem) => {
           return `
         <li class="orders__list-item">
-          <a href="#" class="orders__list-number" data-action="openOrder" id="${
+          <a href="order.html" class="orders__list-number" data-action="openOrder" id="${
             orderItem.id
           }">${this.parseDate(+orderItem.id, orderItem.id)}</a>
         </li>
