@@ -10,6 +10,10 @@
   position: relative;
 }
 
+.show {
+  display: flex;
+}
+
 .orders__list {
   color: #fff;
   background-color: #212529;
@@ -53,6 +57,58 @@
 
 .order__title {
   color: #212529;
+}
+
+@media (width <= 700px) {
+  .orders__list {
+    color: #fff;
+    background-color: #212529;
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px 5px 5px;
+    display: none;
+    position: absolute;
+    top: 15px;
+    right: 0;
+  }
+
+  .orders__list-item {
+    cursor: pointer;
+    border-bottom: 1px solid #f3f3f31a;
+    width: 185px;
+    padding: 5px;
+  }
+
+  .orders__list-item a {
+    gap: 5px;
+    display: flex;
+  }
+
+  .orders__list-number {
+    flex-direction: column;
+    display: flex;
+  }
+
+  #orders:hover > ul {
+    display: flex;
+  }
+
+  .order__content-done {
+    flex-direction: column;
+    gap: 24px;
+    display: flex;
+  }
+
+  .order__basket {
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+    display: flex;
+  }
+
+  .order__title {
+    color: #212529;
+  }
 }
 
 /*# sourceMappingURL=index.7e3145dd.css.map */

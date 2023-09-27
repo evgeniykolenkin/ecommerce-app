@@ -47,6 +47,7 @@ export class View {
     // всё, что касается заказов
     this.orderContentNode = document.getElementById("order__content");
     this.orderBasketNode = document.getElementById("order__basket");
+    this.ordersNode = document.getElementById("orders");
     this.ordersListNode = document.getElementById("orders__list");
   }
 

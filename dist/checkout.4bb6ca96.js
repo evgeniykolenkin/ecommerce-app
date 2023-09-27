@@ -585,6 +585,9 @@ class Controller {
         this.view = new (0, _viewJs.View)();
     }
     initShop() {
+        this.view.ordersNode.addEventListener("click", ()=>{
+            this.showOrders();
+        });
         this.view.shop.addEventListener("click", ()=>{
             this.increment(event, ".item", "plus");
         });
@@ -923,10 +926,15 @@ class Controller {
         }
     }
     openOrder(e) {
-        const parentNode = e.target.closest(".orders__list-item");
-        const orderLink = parentNode.querySelector(".orders__list-number");
-        const id = orderLink.id;
-        if (e.target.dataset.action === "openOrder") localStorage.setItem("orderId", id);
+        if (e.target.dataset.action === "openOrder") {
+            const parentNode = e.target.closest(".orders__list-item");
+            const orderLink = parentNode.querySelector(".orders__list-number");
+            const id = orderLink.id;
+            localStorage.setItem("orderId", id);
+        } else return;
+    }
+    showOrders() {
+        this.view.ordersListNode.classList.add("show");
     }
 }
 
@@ -26965,6 +26973,7 @@ class View {
         // всё, что касается заказов
         this.orderContentNode = document.getElementById("order__content");
         this.orderBasketNode = document.getElementById("order__basket");
+        this.ordersNode = document.getElementById("orders");
         this.ordersListNode = document.getElementById("orders__list");
     }
     generateDropdown(products, data) {
