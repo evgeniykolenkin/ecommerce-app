@@ -930,6 +930,8 @@ class Controller {
             const parentNode = e.target.closest(".orders__list-item");
             const orderLink = parentNode.querySelector(".orders__list-number");
             const id = orderLink.id;
+            console.log("click");
+            // console.log("id", id);
             localStorage.setItem("orderId", id);
         } else return;
     }
@@ -27214,7 +27216,7 @@ class View {
         const minutes = date.getMinutes().toString().padStart(2, "0");
         const seconds = date.getSeconds().toString().padStart(2, "0");
         return `
-      Заказ <p class="address__order-done">#${id}</p> от ${day}.${month}.${fullYear} ${hours}:${minutes}:${seconds}
+      Заказ <p class="address__order-done" data-action="openOrder">#${id}</p> от ${day}.${month}.${fullYear} ${hours}:${minutes}:${seconds}
     `;
     }
     renderOrderLink(orders) {
@@ -27223,7 +27225,7 @@ class View {
             return order.map((orderItem)=>{
                 return `
         <li class="orders__list-item">
-          <a href="order.html" class="orders__list-number" data-action="openOrder" id="${orderItem.id}">${this.parseDate(+orderItem.id, orderItem.id)}</a>
+          <a href="#" class="orders__list-number" data-action="openOrder" id="${orderItem.id}">${this.parseDate(+orderItem.id, orderItem.id)}</a>
         </li>
         `;
             });

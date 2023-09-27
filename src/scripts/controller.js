@@ -447,6 +447,8 @@ export class Controller {
       const parentNode = e.target.closest(".orders__list-item");
       const orderLink = parentNode.querySelector(".orders__list-number");
       const id = orderLink.id;
+      console.log("click");
+      // console.log("id", id);
       localStorage.setItem("orderId", id);
     } else {
       return;
