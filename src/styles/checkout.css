@@ -342,7 +342,7 @@ input::placeholder {
 
 /* ?adaptive */
 
-@media (max-width: 700px) {
+@media only screen and (max-width: 700px) {
   .order__wrapper {
     display: flex;
     flex-direction: column;

@@ -347,14 +347,14 @@ a {
 }
 
 /* ?adaptive */
-@media (max-width: 1400px) {
+@media only screen and (max-width: 1400px) {
   .container {
     width: 100%;
     padding: 10px;
   }
 }
 
-@media (max-width: 1000px) {
+@media only screen and (max-width: 1000px) {
   .shop {
     grid-template-columns: repeat(2, 220px);
     gap: 30px;
@@ -363,7 +363,7 @@ a {
   }
 }
 
-@media (max-width: 700px) {
+@media only screen and (max-width: 700px) {
   .navbar {
     margin-bottom: 10px;
   }
@@ -484,7 +484,7 @@ a {
   }
 }
 
-@media (max-width: 500px) {
+@media only screen and (max-width: 500px) {
   .shop {
     display: flex;
     flex-direction: column;
