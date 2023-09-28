@@ -23,8 +23,9 @@
   display: flex;
 }
 
-.emty__cart {
+.empty__cart {
   text-align: center;
+  font-size: 20px;
 }
 
 .total__result {
@@ -75,6 +76,10 @@
   padding: 10px 24px;
 }
 
+.home__btn {
+  font-size: 16px;
+}
+
 .checkout {
   background-color: #212529;
   display: inline-block;
@@ -99,6 +104,17 @@
   width: 100%;
   padding: 10px;
   display: flex;
+}
+
+@media (width <= 700px) {
+  .shoping__cart {
+    box-sizing: border-box;
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+    padding: 0;
+    display: flex;
+  }
 }
 
 .cart__item {

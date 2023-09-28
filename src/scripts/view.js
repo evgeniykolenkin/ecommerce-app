@@ -150,7 +150,7 @@ export class View {
       this.shopingCart.innerHTML = ``;
       this.shopingCart.style.display = "none";
       this.label.innerHTML = `
-      <h2 class="emty__cart">Корзина пуста</h2>
+      <h2 class="empty__cart">Корзина пуста</h2>
       <a href="index.html">
         <button class="home__btn">Продолжить покупки</button>
       </a>
