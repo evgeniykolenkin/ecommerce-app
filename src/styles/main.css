@@ -40,12 +40,6 @@ a {
   margin-bottom: 30px;
 }
 
-@media (max-width: 700px) {
-  .navbar {
-    margin-bottom: 10px;
-  }
-}
-
 .cart {
   position: relative;
   background-color: #fff;
@@ -73,20 +67,6 @@ a {
   margin: 0 auto;
   padding: 50px;
   box-sizing: border-box;
-}
-
-@media (max-width: 1400px) {
-  .container {
-    width: 100%;
-    padding: 50px;
-  }
-}
-
-@media (max-width: 1200px) {
-  .container {
-    width: 100%;
-    padding: 10px;
-  }
 }
 
 .shop {
@@ -168,92 +148,6 @@ a {
   font-size: 20px;
 }
 
-@media (max-width: 1000px) {
-  .shop {
-    grid-template-columns: repeat(2, 220px);
-    gap: 30px;
-    justify-content: center;
-    margin-bottom: 50px;
-  }
-}
-
-@media (max-width: 500px) {
-  .shop {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 10px;
-  }
-
-  .item {
-    display: flex;
-    border-radius: 22px;
-    width: 100%;
-    padding: 5px;
-  }
-
-  .item img {
-    width: 166px;
-    height: 202px;
-    box-sizing: border-box;
-    background-color: #fff;
-    border-radius: 22px;
-    padding: 0;
-    cursor: pointer;
-  }
-
-  .details {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    gap: 0;
-    width: 100%;
-    padding: 10px;
-    overflow: hidden;
-    box-sizing: border-box;
-  }
-
-  .details h3 {
-    height: 54px;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    text-align: center;
-  }
-
-  .price_quantity {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    gap: 10px;
-    width: 100%;
-  }
-
-  .price_quantity h2 {
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-  }
-
-  .buttons {
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    gap: 8px;
-  }
-
-  .quantity {
-    font-size: 16px;
-  }
-}
-
 .bi-dash-lg {
   cursor: pointer;
   color: red;
@@ -278,12 +172,6 @@ a {
 
 .cart:hover > ul {
   display: flex;
-}
-
-@media (max-width: 700px) {
-  .cart:hover > ul {
-    display: none;
-  }
 }
 
 .dropdown img {
@@ -460,7 +348,39 @@ a {
   cursor: pointer;
 }
 
+/* ?adaptive */
+@media (max-width: 1400px) {
+  .container {
+    width: 100%;
+    padding: 50px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .container {
+    width: 100%;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .shop {
+    grid-template-columns: repeat(2, 220px);
+    gap: 30px;
+    justify-content: center;
+    margin-bottom: 50px;
+  }
+}
+
 @media (max-width: 700px) {
+  .navbar {
+    margin-bottom: 10px;
+  }
+
+  .cart:hover > ul {
+    display: none;
+  }
+
   .popup__content {
     display: flex;
     flex-direction: column;
@@ -569,6 +489,83 @@ a {
     gap: 8px;
     width: 100%;
     padding: 8px 12px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 500px) {
+  .shop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+
+  .item {
+    display: flex;
+    border-radius: 22px;
+    width: 100%;
+    padding: 5px;
+  }
+
+  .item img {
+    width: 166px;
+    height: 202px;
+    box-sizing: border-box;
+    background-color: #fff;
+    border-radius: 22px;
+    padding: 0;
+    cursor: pointer;
+  }
+
+  .details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 0;
+    width: 100%;
+    padding: 10px;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+
+  .details h3 {
+    height: 54px;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+  }
+
+  .price_quantity {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .price_quantity h2 {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .quantity {
     font-size: 16px;
   }
 }
