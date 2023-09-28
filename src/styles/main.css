@@ -67,14 +67,6 @@ a {
   margin: 0 auto;
 }
 
-/* .shop {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  justify-content: center;
-  margin-bottom: 50px;
-} */
-
 .shop {
   display: grid;
   grid-template-columns: repeat(4, 220px);
@@ -360,22 +352,15 @@ a {
     width: 100%;
     padding: 10px;
   }
-
-  .shop {
-    grid-template-columns: repeat(1, 220px);
-    gap: 30px;
-    justify-content: center;
-    margin-bottom: 50px;
-  }
 }
 
 @media (max-width: 1000px) {
-  /* .shop {
+  .shop {
     grid-template-columns: repeat(2, 220px);
     gap: 30px;
     justify-content: center;
     margin-bottom: 50px;
-  } */
+  }
 }
 
 @media (max-width: 700px) {
