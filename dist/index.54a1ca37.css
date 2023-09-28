@@ -352,13 +352,13 @@ input::placeholder {
   .checkout__item-title {
     letter-spacing: -.32px;
     color: #1a1f1680;
-    font-size: 16px;
+    font-size: 12px;
     font-weight: 400;
   }
 
   input {
     box-sizing: border-box;
-    border: none;
+    border-bottom: 1px solid #212529;
     border-radius: 13px;
     height: 40px;
     padding: 8px 10px;

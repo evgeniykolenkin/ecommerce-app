@@ -359,7 +359,7 @@ input::placeholder {
   }
 
   .checkout__item-title {
-    font-size: 16px;
+    font-size: 12px;
     font-weight: 400;
     letter-spacing: -0.32px;
     color: #1a1f1680;
@@ -371,7 +371,7 @@ input::placeholder {
     height: 40px;
     border-radius: 13px;
     padding: 8px 10px;
-    border: none;
+    border-bottom: 1px solid #212529;
     box-shadow: 0px 4px 16px 0px #1a1f1626;
   }
 

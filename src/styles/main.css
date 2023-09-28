@@ -97,23 +97,6 @@ a {
   margin-bottom: 50px;
 }
 
-@media (max-width: 1000px) {
-  .shop {
-    grid-template-columns: repeat(2, 220px);
-    gap: 30px;
-    justify-content: center;
-    margin-bottom: 50px;
-  }
-}
-
-@media (max-width: 700px) {
-  .shop {
-    grid-template-columns: repeat(1, 220px);
-    gap: 30px;
-    margin-bottom: 50px;
-  }
-}
-
 .item {
   box-sizing: border-box;
   border: 1px solid #60695c;
@@ -152,7 +135,7 @@ a {
   line-height: normal;
 }
 
-.details p {
+.details h4 {
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -185,7 +168,88 @@ a {
   font-size: 20px;
 }
 
+@media (max-width: 1000px) {
+  .shop {
+    grid-template-columns: repeat(2, 220px);
+    gap: 30px;
+    justify-content: center;
+    margin-bottom: 50px;
+  }
+}
+
 @media (max-width: 700px) {
+  .shop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+
+  .item {
+    display: flex;
+    border-radius: 22px;
+    width: 100%;
+    padding: 5px;
+  }
+
+  .item img {
+    width: 166px;
+    height: 202px;
+    box-sizing: border-box;
+    background-color: #fff;
+    width: 100%;
+    border-radius: 22px;
+    padding: 0;
+    cursor: pointer;
+  }
+
+  .details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 0;
+    width: 100%;
+    padding: 10px;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+
+  .details h3 {
+    height: 54px;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+  }
+
+  .price_quantity {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .price_quantity h2 {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 8px;
+  }
+
   .quantity {
     font-size: 16px;
   }
@@ -215,6 +279,12 @@ a {
 
 .cart:hover > ul {
   display: flex;
+}
+
+@media (max-width: 700px) {
+  .cart:hover > ul {
+    display: none;
+  }
 }
 
 .dropdown img {

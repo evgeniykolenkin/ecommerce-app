@@ -278,14 +278,22 @@ export class Controller {
       this.view.addressCityPopup.value.trim() &&
       this.view.addressPhonePopup.value.trim()
     ) {
-      this.view.addressNameData.innerHTML =
-        this.view.addressNamePopup.value.trim();
-      this.view.addressStreetData.innerHTML =
-        this.view.addressStreetPopup.value.trim();
-      this.view.addressCityData.innerHTML =
-        this.view.addressCityPopup.value.trim();
-      this.view.addressPhoneData.innerHTML =
-        this.view.addressPhonePopup.value.trim();
+      this.view.addressNameData.innerHTML = `
+      Имя: 
+      ${this.view.addressNamePopup.value.trim()}
+      `;
+      this.view.addressStreetData.innerHTML = `
+      Улица: 
+      ${this.view.addressStreetPopup.value.trim()}
+      `;
+      this.view.addressCityData.innerHTML = `
+      Город: 
+      ${this.view.addressCityPopup.value.trim()}
+      `;
+      this.view.addressPhoneData.innerHTML = `
+      Номер телефона: 
+      ${this.view.addressPhonePopup.value.trim()}
+      `;
       this.view.addressPopupData.classList.toggle("checkout__popup-open");
       this.view.bodyNode.classList.toggle("body__fixed");
     }
@@ -447,8 +455,6 @@ export class Controller {
       const parentNode = e.target.closest(".orders__list-item");
       const orderLink = parentNode.querySelector(".orders__list-number");
       const id = orderLink.id;
-      console.log("click");
-      // console.log("id", id);
       localStorage.setItem("orderId", id);
     } else {
       return;
@@ -456,6 +462,6 @@ export class Controller {
   }
 
   showOrders() {
-    this.view.ordersListNode.classList.add("show");
+    this.view.ordersListNode.classList.toggle("show");
   }
 }
