@@ -170,7 +170,7 @@ a {
   }
 }
 
-@media (width <= 700px) {
+@media (width <= 500px) {
   .shop {
     flex-direction: column;
     justify-content: center;
@@ -192,7 +192,7 @@ a {
     cursor: pointer;
     background-color: #fff;
     border-radius: 22px;
-    width: 100%;
+    width: 166px;
     height: 202px;
     padding: 0;
   }

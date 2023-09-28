@@ -177,7 +177,7 @@ a {
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 500px) {
   .shop {
     display: flex;
     flex-direction: column;
@@ -199,7 +199,6 @@ a {
     height: 202px;
     box-sizing: border-box;
     background-color: #fff;
-    width: 100%;
     border-radius: 22px;
     padding: 0;
     cursor: pointer;
