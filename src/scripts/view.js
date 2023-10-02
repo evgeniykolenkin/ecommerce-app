@@ -51,6 +51,11 @@ export class View {
     this.ordersListNode = document.getElementById("orders__list");
   }
 
+  // МЕТОДЫ View
+
+  // рендер выпадющего списка корзины
+  // параметры, которые передаю можно проверить в контроллере,
+  // это массив bsket и shopList
   generateDropdown(products, data) {
     if (products.length !== 0) {
       return (this.dropdown.innerHTML = products
@@ -73,15 +78,21 @@ export class View {
     }
   }
 
+  // рендер самого магазина
   generateShop(data, products, isLoading) {
     if (isLoading) {
       return (this.shop.innerHTML = `
         <div>Загрузка...</div>
       `);
     }
+    // для каждого элемента из массива shopList
     return (this.shop.innerHTML = data
       .map((item) => {
+        // так можно деструктурировать каждый элемент, чтобы
+        // было проще образаться к его свойствам
         const { id, name, desc, price, img } = item;
+        // находим среди нашего basket такой элемент, id которого
+        // равен id элемента из shopList
         const search = products.find((item) => item.id === id) || [];
         return `
       <li class="item" id="${id}">
@@ -106,6 +117,8 @@ export class View {
       .join(""));
   }
 
+  // рендер страницы корзины
+  // процесс такой же, как в методе выше
   generateCartItems(products, data, isloading) {
     if (isloading) {
       return (this.shopingCart.innerHTML = `
@@ -158,9 +171,14 @@ export class View {
     }
   }
 
+  // рендер папопа карточки товара
+  // логика та же
   renderPopupCard(e, data) {
+    // находим родителя таргета
     const parentNode = e.target.closest(".item");
+    // его id
     const id = parentNode.id;
+    // чтоб совпал с shopList
     const search = data.find((item) => item.id === id);
     const popup = (this.popupCardNode.innerHTML = `
     <div class="popup__content" id="popup__content">
@@ -188,6 +206,7 @@ export class View {
     return popup;
   }
 
+  // рендер страницы проверки заказа
   renderCheckoutPage(products, data) {
     return (this.checkCartNode.innerHTML = products
       .map((item) => {
@@ -219,10 +238,18 @@ export class View {
       .join(""));
   }
 
+  // рендер страницы заказа
   renderOrderData(orders, data) {
+    // вытягиваем id того заказа, который сохранился в сторадж
+    // после нажатия на кнопку "оформить" на странице проверки заказа
     const orderId = localStorage.getItem("orderId");
+
+    // очищаем это поле в сторадже, чтобы кажыдй новый заказ имел
+    // свой уникальынй айди в сторадже
     localStorage.setItem("orderId", undefined);
 
+    // отображаем введённые данные из инпутов, которые сохранились в отдельный массив
+    // это я делаю в контроллере
     this.orderContentNode.innerHTML = orders
       .map((item) => {
         const { order } = item;
@@ -286,6 +313,8 @@ export class View {
       })
       .join("");
 
+    // отображаем данные о заказанных товарах
+    // тоже беру данные из массива, в который пушу данные в контроллере
     this.checkCartNode.innerHTML = orders
       .map((item) => {
         const { order } = item;
@@ -327,6 +356,7 @@ export class View {
       .join("");
   }
 
+  // редактирую запись даты стандартную
   parseDate(dateNumber, id) {
     const date = new Date(dateNumber);
     const day = date.getDate().toString().padStart(2, "0");
@@ -340,6 +370,7 @@ export class View {
     `;
   }
 
+  // рендер ссылки на сущетсвующий заказ на главной странице
   renderOrderLink(orders) {
     this.ordersListNode.innerHTML = orders
       .map((item) => {

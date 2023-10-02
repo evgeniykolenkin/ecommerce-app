@@ -7,7 +7,10 @@ export class Controller {
     this.view = new View();
   }
 
+  // Методы Контроллера
+  // инициализируем магазин в index.js этот момент
   initShop() {
+    // слушатели
     this.view.ordersNode.addEventListener("click", () => {
       this.showOrders();
     });
@@ -30,6 +33,12 @@ export class Controller {
       this.openOrder(event);
     });
     this.view.generateShop(this.model.shopList, this.model.basket, true);
+    // вот тут основная магия:
+    // рендерим основную страницу, это была асинхронная функция
+    // используем then, получаем результат, это массив из товаров с FireStore
+    // обновляем наш массив shopList(он был пустой по умолчанию)
+    // и дальше передаем параметры в наши функции рендера, готово
+    // ниже будет такая же логика в методах инициализации
     this.model.getProducts().then((response) => {
       this.model.update(response);
       this.view.generateShop(this.model.shopList, this.model.basket);
@@ -39,6 +48,7 @@ export class Controller {
     this.calculation();
   }
 
+  // инициализируем корзину
   initCart() {
     this.view.shopingCart.addEventListener("click", () => {
       this.increment(event, ".cart__item", "plus");
@@ -62,6 +72,7 @@ export class Controller {
     this.calculation();
   }
 
+  // инициализируем страницу проверки
   initCheckout() {
     this.view.saveAddressData.addEventListener("click", () => {
       this.saveAdressData(event);
@@ -92,6 +103,7 @@ export class Controller {
     this.calculation();
   }
 
+  // инициализируем страницу товара
   initOrder() {
     this.model.getProducts().then((response) => {
       this.model.update(response);
@@ -99,6 +111,9 @@ export class Controller {
     });
   }
 
+  // сложение через родителя таргета и так далее
+  // проверяем, где был клик, если в bаsket что-то есть похожее по id,
+  // добавляем, если нет создаем новый объект и пушим его
   increment(e, parentClass, actionName) {
     const parentNode = e.target.closest(parentClass);
     const dropdown = document.querySelector(".dropdown");
@@ -130,6 +145,7 @@ export class Controller {
     }
   }
 
+  // вычитание(аналогично)
   decrement(e, parentClass, actionName) {
     const parentNode = e.target.closest(parentClass);
     const dropdown = document.querySelector(".dropdown");
@@ -158,10 +174,13 @@ export class Controller {
     }
   }
 
+  // удаление
   deleteCard(e, parentClass, actioName) {
     const parentNode = e.target.closest(parentClass);
     const id = parentNode.id;
     if (e.target.dataset.action === actioName) {
+      // здесь просто с помощью фильтра, мы оставляем все объекты внутри basket, кроме того
+      // по которому был клик
       this.model.basket = this.model.basket.filter((item) => item.id !== id);
     }
     this.view.generateCartItems(this.model.basket, this.model.shopList);
@@ -170,6 +189,7 @@ export class Controller {
     this.model.setLocalStorage();
   }
 
+  // чистим корзину
   clearCart(e, actionName) {
     if (e.target.dataset.action === actionName) {
       this.model.basket = [];
@@ -179,10 +199,12 @@ export class Controller {
     }
   }
 
+  // считаем общую сумму в товаре
   getTotal() {
     const delivery = 6.99;
     if (this.model.basket.length !== 0) {
       const total = this.model.basket
+        // с методами map и reduce остаётся только знакомиться, в реакте очень-очень пригодятся
         .map((item) => {
           const { id, amount } = item;
           const search =
@@ -208,6 +230,7 @@ export class Controller {
     }
   }
 
+  // считаем общую сумму в заказе
   getResult() {
     const delivery = 6.99;
     if (this.model.basket.length !== 0) {
@@ -236,6 +259,7 @@ export class Controller {
     }
   }
 
+  // обновляем количество товаров после сложения и вычитания
   update(id) {
     const search = this.model.basket.find((item) => item.id === id);
     const item = document.getElementById(id);
@@ -244,19 +268,24 @@ export class Controller {
     this.calculation();
   }
 
+  // считаем общее количество товаров в корзине
   calculation() {
     this.view.cartIcon.innerHTML = this.model.basket
       .map((item) => item.amount)
       .reduce((amount, sum) => (sum += amount), 0);
   }
 
+  // смена стилей для попапа
   togglePopup() {
     this.view.popupCardNode.classList.toggle("popup__open");
     this.view.bodyNode.classList.toggle("body__fixed");
   }
 
+  // открытие попапа по нажатию на карточку товара(таргет) с классом .item
   openCardPopup(e) {
+    // но вешаю я этот обработчик на весь магазин
     const parentNode = e.target.closest(".item");
+    // и проверяю, был ли клик по таргету с action show или нет
     if (parentNode === null) {
       return;
     } else if (e.target.dataset.action === "show") {
@@ -270,6 +299,7 @@ export class Controller {
     this.view.bodyNode.classList.toggle("body__fixed");
   }
 
+  // записываем данные из инпутов
   saveAdressData(e) {
     e.preventDefault();
     if (
@@ -319,6 +349,8 @@ export class Controller {
     }
   }
 
+  // закрытие всплывающих окон, когда клик вне области контента
+  // (из урока во втором модуле, по-моему)))
   closeChangeAddressPopup(e) {
     const isClickOutsideContent = !e
       .composedPath()
@@ -371,11 +403,14 @@ export class Controller {
     }
   }
 
+  // это добавление 1 товара в корзину по нажатию на кнопку "добавить в корзину"
+  // когда открыт попап карточки товара
   addToCart(e) {
     const parentNode = e.target.closest(".popup__content");
     if (e.target.dataset.action === "add") {
       const add = parentNode.querySelector(".popup__btn-add");
       const id = add.id;
+      // тут всё, как и в сложении
       const search = this.model.basket.find((item) => item.id === id);
       if (search === undefined) {
         this.model.basket.push({
@@ -402,8 +437,11 @@ export class Controller {
     }
   }
 
+  // размещение заказа
   sendOrder(e) {
+    // если клик по кнопке
     if (e.target.dataset.action === "send") {
+      // если не введено ничего в инпуты
       if (
         !(
           this.view.addressNamePopup.value.trim() &&
@@ -422,8 +460,11 @@ export class Controller {
         return;
       }
 
+      // создаём уникальынй айди при нажатии, приводим его к строке, чтобы потом
+      // отформатировать дату можно было легко
       const newID = Date.now().toString();
 
+      // пушим в массив заказов новый заказ со всеми данными взятыми выше
       this.model.orders.push({
         order: [
           {
@@ -438,10 +479,14 @@ export class Controller {
         ],
       });
 
+      // временно сохраняем айди в локал сторадж с новым ключем
+      // можно было тоже в модели отдельно создать такую функцию
       localStorage.setItem("orderId", newID);
 
+      // сохраняем данные о заказе в локал сторадж
       this.model.setOrderLocalStorage();
 
+      // удаляем данные корзины из стораджа
       this.model.deleteStorageData();
 
       setTimeout(function () {
@@ -450,11 +495,14 @@ export class Controller {
     }
   }
 
+  // открытие заказа по ссылке на главной странице
   openOrder(e) {
     if (e.target.dataset.action === "openOrder") {
       const parentNode = e.target.closest(".orders__list-item");
       const orderLink = parentNode.querySelector(".orders__list-number");
       const id = orderLink.id;
+
+      // такая же манипуляция с айди
       localStorage.setItem("orderId", id);
     } else {
       return;

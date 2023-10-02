@@ -1,3 +1,4 @@
+// подключаем Firebase, FireStore
 import { initializeApp } from "firebase/app";
 import { getFirestore, collection, getDocs } from "firebase/firestore";
 
@@ -13,22 +14,26 @@ const firebaseConfig = {
 const appFirebase = initializeApp(firebaseConfig);
 const db = getFirestore(appFirebase);
 
+// создаём оригинал класса Model
 export class Model {
   constructor() {
+    // данные. которые получаем из локалсторадж
     this.orders = this.getOrderLocalStorage();
     this.basket = this.getLocalStorage();
     this.shopList = [];
     this.payMethod = "nothing";
   }
 
-  updateID(id) {
-    this.orderId = id;
-  }
+  // МЕТОДЫ МОДЕЛИ
 
+  // функция для обновления массива(просто так его не обновить,
+  // потому что данные всегда берутся из оригинала,
+  // когда создается экземпляра значит он будет пустой всегда)
   update(list) {
     this.shopList = list;
   }
 
+  // функция для загрузки данных из Firestore(из документации)
   async getProducts() {
     const querySnapshot = await getDocs(collection(db, "products"));
     const shopList = [];
@@ -41,9 +46,11 @@ export class Model {
         price: doc.data().price,
       });
     });
+    // здесь мы запушили данные в массив, но помним, что он не изменился в оригинальной модели
     return shopList;
   }
 
+  // работа с локал сторадж ("ключ", массив)
   setLocalStorage() {
     return localStorage.setItem("data", JSON.stringify(this.basket));
   }
