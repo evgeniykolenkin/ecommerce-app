@@ -77,7 +77,7 @@
 99C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\@firebase\auth\dist\cordova\src\core\auth133403146533146449 1
 131C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\@firebase\firestore\dist\packages\firestore\src\lite-api\field_value.d.ts133395871526734668 0
 75C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\has-flag\index.js133384857729209389 0
-49C:\Users\Admin\Desktop\sd-code\ecommerce-app\dist133403913256455754 1
+49C:\Users\Admin\Desktop\sd-code\ecommerce-app\dist133449415098735166 1
 136C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\@firebase\firestore\dist\packages\firestore\src\model\transform_operation.d.ts133395871548072024 0
 130C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\@firebase\firestore\dist\firestore\test\unit\model\field_index.test.d.ts133395871525969747 0
 127C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\@firebase\database\dist\node-esm\src\core\operation\AckUserWrite.d.ts133395871506564505 0
@@ -120,7 +120,7 @@
 128C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\@firebase\firestore\dist\firestore\test\unit\util\sorted_map.test.d.ts133395871544521177 0
 104C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\firebase\storage\dist\esm\functions\index.d.ts133395871559584600 0
 120C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\@grpc\grpc-js\build\src\generated\grpc\channelz\v1\Socket.d.ts133395871514020723 0
-49C:\Users\Admin\Desktop\sd-code\ecommerce-app\prod133407408603606748 1
+49C:\Users\Admin\Desktop\sd-code\ecommerce-app\prod133449415391484233 1
 76C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\uuid\dist\regex.js133397650338035717 0
 96C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\caniuse-lite\data\features\promises.js133384857741574891 0
 118C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\@firebase\firestore\dist\firestore\src\platform\browser_lite133403146584126832 1
@@ -213,7 +213,7 @@
 115C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\@parcel\runtime-js\lib\helpers\browser\import-polyfill.js133384857732865350 0
 97C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\type-fest\source\async-return-type.d.ts133384857730015330 0
 75C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\parcel\src\bin.js133384857729508660 0
-62C:\Users\Admin\Desktop\sd-code\ecommerce-app\src\checkout.html133403814005738016 0
+62C:\Users\Admin\Desktop\sd-code\ecommerce-app\src\checkout.html133449414839647174 0
 99C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\@firebase\messaging\dist\esm\src\api.d.ts133395871501515103 0
 99C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\firebase\messaging\dist\esm\remote-config133403146791950243 1
 122C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\@parcel\optimizer-htmlnano\node_modules\svgo\lib\svgo\jsAPI.d.ts133384857736279154 0
@@ -349,7 +349,7 @@
 70C:\Users\Admin\Desktop\sd-code\ecommerce-app\prod\checkout.c3b1e587.js133407408603580195 0
 116C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\firebase\compat\functions\dist\esm\messaging\sw\index.d.ts133395871540076696 0
 123C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\@firebase\messaging\dist\src\helpers\externalizePayload.test.d.ts133395871503056838 0
-63C:\Users\Admin\Desktop\sd-code\ecommerce-app\prod\checkout.html133407408603590205 0
+63C:\Users\Admin\Desktop\sd-code\ecommerce-app\prod\checkout.html133449415391474237 0
 135C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\@firebase\auth\dist\src\platform_browser\recaptcha\recaptcha_loader.test.d.ts133395871549626600 0
 120C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\firebase\compat\analytics\dist\esm\compat\functions\index.d.ts133395871530901476 0
 78C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\semver\bin\semver.js133384857734410071 0
@@ -13596,7 +13596,7 @@
 117C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\@firebase\auth\dist\src\core\user\user_credential_impl.d.ts133395871558084265 0
 115C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\@grpc\grpc-js\src\generated\google\protobuf\Int64Value.ts133395871512256066 0
 92C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\@grpc\grpc-js\proto\channelz.proto133395871509757936 0
-74C:\Users\Admin\Desktop\sd-code\ecommerce-app\dist\checkout.4bb6ca96.js.map133403913256445751 0
+74C:\Users\Admin\Desktop\sd-code\ecommerce-app\dist\checkout.4bb6ca96.js.map133449415098719796 0
 81C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\@grpc\grpc-js\build\src133403146636318291 1
 102C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\@grpc\grpc-js\build\src\backoff-timeout.d.ts133395871510004653 0
 130C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\@firebase\firestore\dist\packages\firestore\src\remote\remote_store.d.ts133395871541691194 0
@@ -17468,7 +17468,7 @@
 71C:\Users\Admin\Desktop\sd-code\ecommerce-app\node_modules\.bin\uuid.ps1133397650338421537 0
 67C:\Users\Admin\Desktop\sd-code\ecommerce-app\docs\cart.64966c7a.css133403932461509798 0
 59C:\Users\Admin\Desktop\sd-code\ecommerce-app\docs\cart.html133403914504768277 0
-63C:\Users\Admin\Desktop\sd-code\ecommerce-app\docs\checkout.html133403914396463397 0
+63C:\Users\Admin\Desktop\sd-code\ecommerce-app\docs\checkout.html133449414556319708 0
 68C:\Users\Admin\Desktop\sd-code\ecommerce-app\docs\index.33d91e59.css133403912890655321 0
 68C:\Users\Admin\Desktop\sd-code\ecommerce-app\docs\index.f07b73ee.css133403931139200439 0
 60C:\Users\Admin\Desktop\sd-code\ecommerce-app\docs\index.html133403914246837650 0
@@ -17477,8 +17477,8 @@
 67C:\Users\Admin\Desktop\sd-code\ecommerce-app\dist\cart.4ea326c1.css133403913255854618 0
 59C:\Users\Admin\Desktop\sd-code\ecommerce-app\dist\cart.html133403913255854618 0
 70C:\Users\Admin\Desktop\sd-code\ecommerce-app\dist\checkout.06e774f3.js133403913256365749 0
-70C:\Users\Admin\Desktop\sd-code\ecommerce-app\dist\checkout.4bb6ca96.js133403913256365749 0
-63C:\Users\Admin\Desktop\sd-code\ecommerce-app\dist\checkout.html133403913255644683 0
+70C:\Users\Admin\Desktop\sd-code\ecommerce-app\dist\checkout.4bb6ca96.js133449415098629802 0
+63C:\Users\Admin\Desktop\sd-code\ecommerce-app\dist\checkout.html133449415097745683 0
 71C:\Users\Admin\Desktop\sd-code\ecommerce-app\dist\index.0fbc91cd.js.map133403913255496954 0
 68C:\Users\Admin\Desktop\sd-code\ecommerce-app\dist\index.4851a641.css133403913255419760 0
 72C:\Users\Admin\Desktop\sd-code\ecommerce-app\dist\index.54a1ca37.css.map133403913255496954 0

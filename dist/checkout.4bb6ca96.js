@@ -584,7 +584,10 @@ class Controller {
         this.model = new (0, _modelJs.Model)();
         this.view = new (0, _viewJs.View)();
     }
+    // Методы Контроллера
+    // инициализируем магазин в index.js этот момент
     initShop() {
+        // слушатели
         this.view.ordersNode.addEventListener("click", ()=>{
             this.showOrders();
         });
@@ -607,6 +610,12 @@ class Controller {
             this.openOrder(event);
         });
         this.view.generateShop(this.model.shopList, this.model.basket, true);
+        // вот тут основная магия:
+        // рендерим основную страницу, это была асинхронная функция
+        // используем then, получаем результат, это массив из товаров с FireStore
+        // обновляем наш массив shopList(он был пустой по умолчанию)
+        // и дальше передаем параметры в наши функции рендера, готово
+        // ниже будет такая же логика в методах инициализации
         this.model.getProducts().then((response)=>{
             this.model.update(response);
             this.view.generateShop(this.model.shopList, this.model.basket);
@@ -615,6 +624,7 @@ class Controller {
         this.view.renderOrderLink(this.model.orders);
         this.calculation();
     }
+    // инициализируем корзину
     initCart() {
         this.view.shopingCart.addEventListener("click", ()=>{
             this.increment(event, ".cart__item", "plus");
@@ -636,6 +646,7 @@ class Controller {
         });
         this.calculation();
     }
+    // инициализируем страницу проверки
     initCheckout() {
         this.view.saveAddressData.addEventListener("click", ()=>{
             this.saveAdressData(event);
@@ -665,12 +676,16 @@ class Controller {
         });
         this.calculation();
     }
+    // инициализируем страницу товара
     initOrder() {
         this.model.getProducts().then((response)=>{
             this.model.update(response);
             this.view.renderOrderData(this.model.orders, this.model.shopList);
         });
     }
+    // сложение через родителя таргета и так далее
+    // проверяем, где был клик, если в bаsket что-то есть похожее по id,
+    // добавляем, если нет создаем новый объект и пушим его
     increment(e, parentClass, actionName) {
         const parentNode = e.target.closest(parentClass);
         const dropdown = document.querySelector(".dropdown");
@@ -697,6 +712,7 @@ class Controller {
             }
         }
     }
+    // вычитание(аналогично)
     decrement(e, parentClass, actionName) {
         const parentNode = e.target.closest(parentClass);
         const dropdown = document.querySelector(".dropdown");
@@ -717,15 +733,19 @@ class Controller {
             }
         }
     }
+    // удаление
     deleteCard(e, parentClass, actioName) {
         const parentNode = e.target.closest(parentClass);
         const id = parentNode.id;
-        if (e.target.dataset.action === actioName) this.model.basket = this.model.basket.filter((item)=>item.id !== id);
+        if (e.target.dataset.action === actioName) // здесь просто с помощью фильтра, мы оставляем все объекты внутри basket, кроме того
+        // по которому был клик
+        this.model.basket = this.model.basket.filter((item)=>item.id !== id);
         this.view.generateCartItems(this.model.basket, this.model.shopList);
         this.getTotal();
         this.calculation();
         this.model.setLocalStorage();
     }
+    // чистим корзину
     clearCart(e, actionName) {
         if (e.target.dataset.action === actionName) {
             this.model.basket = [];
@@ -734,10 +754,12 @@ class Controller {
             this.model.setLocalStorage();
         }
     }
+    // считаем общую сумму в товаре
     getTotal() {
         const delivery = 6.99;
         if (this.model.basket.length !== 0) {
-            const total = this.model.basket.map((item)=>{
+            const total = this.model.basket// с методами map и reduce остаётся только знакомиться, в реакте очень-очень пригодятся
+            .map((item)=>{
                 const { id, amount } = item;
                 const search = this.model.shopList.find((shopItem)=>shopItem.id === id) || [];
                 return amount * search.price;
@@ -757,6 +779,7 @@ class Controller {
         `;
         } else return;
     }
+    // считаем общую сумму в заказе
     getResult() {
         const delivery = 6.99;
         if (this.model.basket.length !== 0) {
@@ -779,6 +802,7 @@ class Controller {
         `;
         } else return;
     }
+    // обновляем количество товаров после сложения и вычитания
     update(id) {
         const search = this.model.basket.find((item)=>item.id === id);
         const item = document.getElementById(id);
@@ -786,15 +810,20 @@ class Controller {
         quantity.innerHTML = search.amount;
         this.calculation();
     }
+    // считаем общее количество товаров в корзине
     calculation() {
         this.view.cartIcon.innerHTML = this.model.basket.map((item)=>item.amount).reduce((amount, sum)=>sum += amount, 0);
     }
+    // смена стилей для попапа
     togglePopup() {
         this.view.popupCardNode.classList.toggle("popup__open");
         this.view.bodyNode.classList.toggle("body__fixed");
     }
+    // открытие попапа по нажатию на карточку товара(таргет) с классом .item
     openCardPopup(e) {
+        // но вешаю я этот обработчик на весь магазин
         const parentNode = e.target.closest(".item");
+        // и проверяю, был ли клик по таргету с action show или нет
         if (parentNode === null) return;
         else if (e.target.dataset.action === "show") {
             this.view.renderPopupCard(event, this.model.shopList);
@@ -805,6 +834,7 @@ class Controller {
         this.view.addressPopupData.classList.toggle("checkout__popup-open");
         this.view.bodyNode.classList.toggle("body__fixed");
     }
+    // записываем данные из инпутов
     saveAdressData(e) {
         e.preventDefault();
         if (this.view.addressNamePopup.value.trim() && this.view.addressStreetPopup.value.trim() && this.view.addressCityPopup.value.trim() && this.view.addressPhonePopup.value.trim()) {
@@ -836,6 +866,8 @@ class Controller {
         if (!this.view.addressPhonePopup.value.trim()) this.view.addressPhonePopup.classList.add("checkout__sign");
         else this.view.addressPhonePopup.classList.remove("checkout__sign");
     }
+    // закрытие всплывающих окон, когда клик вне области контента
+    // (из урока во втором модуле, по-моему)))
     closeChangeAddressPopup(e) {
         const isClickOutsideContent = !e.composedPath().includes(this.view.addressPopupContent);
         if (isClickOutsideContent) {
@@ -876,11 +908,14 @@ class Controller {
             return this.payMethod;
         }
     }
+    // это добавление 1 товара в корзину по нажатию на кнопку "добавить в корзину"
+    // когда открыт попап карточки товара
     addToCart(e) {
         const parentNode = e.target.closest(".popup__content");
         if (e.target.dataset.action === "add") {
             const add = parentNode.querySelector(".popup__btn-add");
             const id = add.id;
+            // тут всё, как и в сложении
             const search = this.model.basket.find((item)=>item.id === id);
             if (search === undefined) {
                 this.model.basket.push({
@@ -903,8 +938,11 @@ class Controller {
         const parentNode = e.target.closest(".popup__content");
         if (parentNode === null || e.target.dataset.action === actionName) this.togglePopup();
     }
+    // размещение заказа
     sendOrder(e) {
+        // если клик по кнопке
         if (e.target.dataset.action === "send") {
+            // если не введено ничего в инпуты
             if (!(this.view.addressNamePopup.value.trim() && this.view.addressStreetPopup.value.trim() && this.view.addressCityPopup.value.trim() && this.view.addressPhonePopup.value.trim())) {
                 this.view.addressPopupData.classList.toggle("checkout__popup-open");
                 this.view.bodyNode.classList.toggle("body__fixed");
@@ -915,7 +953,10 @@ class Controller {
                 this.view.bodyNode.classList.toggle("body__fixed");
                 return;
             }
+            // создаём уникальынй айди при нажатии, приводим его к строке, чтобы потом
+            // отформатировать дату можно было легко
             const newID = Date.now().toString();
+            // пушим в массив заказов новый заказ со всеми данными взятыми выше
             this.model.orders.push({
                 order: [
                     {
@@ -929,19 +970,25 @@ class Controller {
                     }
                 ]
             });
+            // временно сохраняем айди в локал сторадж с новым ключем
+            // можно было тоже в модели отдельно создать такую функцию
             localStorage.setItem("orderId", newID);
+            // сохраняем данные о заказе в локал сторадж
             this.model.setOrderLocalStorage();
+            // удаляем данные корзины из стораджа
             this.model.deleteStorageData();
             setTimeout(function() {
                 window.location.href = "order.html";
             }, 500);
         }
     }
+    // открытие заказа по ссылке на главной странице
     openOrder(e) {
         if (e.target.dataset.action === "openOrder") {
             const parentNode = e.target.closest(".orders__list-item");
             const orderLink = parentNode.querySelector(".orders__list-number");
             const id = orderLink.id;
+            // такая же манипуляция с айди
             localStorage.setItem("orderId", id);
         } else return;
     }
@@ -951,8 +998,10 @@ class Controller {
 }
 
 },{"./model.js":"itPMq","./view.js":"2KNGn","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"itPMq":[function(require,module,exports) {
+// подключаем Firebase, FireStore
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
+// создаём оригинал класса Model
 parcelHelpers.export(exports, "Model", ()=>Model);
 var _app = require("firebase/app");
 var _firestore = require("firebase/firestore");
@@ -968,17 +1017,20 @@ const appFirebase = (0, _app.initializeApp)(firebaseConfig);
 const db = (0, _firestore.getFirestore)(appFirebase);
 class Model {
     constructor(){
+        // данные. которые получаем из локалсторадж
         this.orders = this.getOrderLocalStorage();
         this.basket = this.getLocalStorage();
         this.shopList = [];
         this.payMethod = "nothing";
     }
-    updateID(id) {
-        this.orderId = id;
-    }
+    // МЕТОДЫ МОДЕЛИ
+    // функция для обновления массива(просто так его не обновить,
+    // потому что данные всегда берутся из оригинала,
+    // когда создается экземпляра значит он будет пустой всегда)
     update(list) {
         this.shopList = list;
     }
+    // функция для загрузки данных из Firestore(из документации)
     async getProducts() {
         const querySnapshot = await (0, _firestore.getDocs)((0, _firestore.collection)(db, "products"));
         const shopList = [];
@@ -991,8 +1043,10 @@ class Model {
                 price: doc.data().price
             });
         });
+        // здесь мы запушили данные в массив, но помним, что он не изменился в оригинальной модели
         return shopList;
     }
+    // работа с локал сторадж ("ключ", массив)
     setLocalStorage() {
         return localStorage.setItem("data", JSON.stringify(this.basket));
     }
@@ -26988,6 +27042,10 @@ class View {
         this.ordersNode = document.getElementById("orders");
         this.ordersListNode = document.getElementById("orders__list");
     }
+    // МЕТОДЫ View
+    // рендер выпадющего списка корзины
+    // параметры, которые передаю можно проверить в контроллере,
+    // это массив bsket и shopList
     generateDropdown(products, data) {
         if (products.length !== 0) return this.dropdown.innerHTML = products.map((item)=>{
             const { id } = item;
@@ -27004,12 +27062,18 @@ class View {
         }).join("");
         else this.dropdown.innerHTML = ``;
     }
+    // рендер самого магазина
     generateShop(data, products, isLoading) {
         if (isLoading) return this.shop.innerHTML = `
         <div>Загрузка...</div>
       `;
+        // для каждого элемента из массива shopList
         return this.shop.innerHTML = data.map((item)=>{
+            // так можно деструктурировать каждый элемент, чтобы
+            // было проще образаться к его свойствам
             const { id, name, desc, price, img } = item;
+            // находим среди нашего basket такой элемент, id которого
+            // равен id элемента из shopList
             const search = products.find((item)=>item.id === id) || [];
             return `
       <li class="item" id="${id}">
@@ -27030,6 +27094,8 @@ class View {
   `;
         }).join("");
     }
+    // рендер страницы корзины
+    // процесс такой же, как в методе выше
     generateCartItems(products, data, isloading) {
         if (isloading) return this.shopingCart.innerHTML = `
       <div>Загрузка...</div>
@@ -27074,9 +27140,14 @@ class View {
       `;
         }
     }
+    // рендер папопа карточки товара
+    // логика та же
     renderPopupCard(e, data) {
+        // находим родителя таргета
         const parentNode = e.target.closest(".item");
+        // его id
         const id = parentNode.id;
+        // чтоб совпал с shopList
         const search = data.find((item)=>item.id === id);
         const popup = this.popupCardNode.innerHTML = `
     <div class="popup__content" id="popup__content">
@@ -27103,6 +27174,7 @@ class View {
     `;
         return popup;
     }
+    // рендер страницы проверки заказа
     renderCheckoutPage(products, data) {
         return this.checkCartNode.innerHTML = products.map((item)=>{
             const { id, amount } = item;
@@ -27129,9 +27201,16 @@ class View {
         `;
         }).join("");
     }
+    // рендер страницы заказа
     renderOrderData(orders, data) {
+        // вытягиваем id того заказа, который сохранился в сторадж
+        // после нажатия на кнопку "оформить" на странице проверки заказа
         const orderId = localStorage.getItem("orderId");
+        // очищаем это поле в сторадже, чтобы кажыдй новый заказ имел
+        // свой уникальынй айди в сторадже
         localStorage.setItem("orderId", undefined);
+        // отображаем введённые данные из инпутов, которые сохранились в отдельный массив
+        // это я делаю в контроллере
         this.orderContentNode.innerHTML = orders.map((item)=>{
             const { order } = item;
             const searchOrder = order.find((orderItem)=>orderItem.id === orderId);
@@ -27187,6 +27266,8 @@ class View {
           </div>
           `;
         }).join("");
+        // отображаем данные о заказанных товарах
+        // тоже беру данные из массива, в который пушу данные в контроллере
         this.checkCartNode.innerHTML = orders.map((item)=>{
             const { order } = item;
             const searchOrder = order.find((orderItem)=>orderItem.id === orderId);
@@ -27217,6 +27298,7 @@ class View {
             });
         }).join("");
     }
+    // редактирую запись даты стандартную
     parseDate(dateNumber, id) {
         const date = new Date(dateNumber);
         const day = date.getDate().toString().padStart(2, "0");
@@ -27229,6 +27311,7 @@ class View {
       Заказ <p class="address__order-done" data-action="openOrder">#${id}</p> от ${day}.${month}.${fullYear} ${hours}:${minutes}:${seconds}
     `;
     }
+    // рендер ссылки на сущетсвующий заказ на главной странице
     renderOrderLink(orders) {
         this.ordersListNode.innerHTML = orders.map((item)=>{
             const { order } = item;
